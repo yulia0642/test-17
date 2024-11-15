@@ -1,0 +1,59 @@
+*{
+    margin: 10px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px; 
+    width: 100%;
+    min-height: 100vh; 
+}
+
+.container {
+   display: grid; 
+   gap: 20px;
+
+   /* ! */
+   grid-template-columns: repeat(3,1fr); 
+}
+
+[class^="box-"] {
+    background-color: rgb(20, 197, 176); 
+    /* Размещаем контейнеры по центру*/
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    display: grid;
+    gap: 20px;
+}
+
+
+
+
+
+.container {
+    display: grid;
+    gap: 20px;
+    height: 100vh;
+    /* ! */
+   grid-template-areas: 
+    "A A A A    A A A A    A A A A"
+    "B B C C    C C C C    C C C C"
+    "B B C C    C C C C    C C C C";
+}
+
+.box-1 {
+    grid-area: A;
+}
+
+.box-2 {
+    grid-area: B;
+}
+
+.box-3 {
+    grid-area: C;
+}
